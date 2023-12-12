@@ -79,7 +79,7 @@ flyMuseum.flyingObject(myPen)
 
 protocol CanFly {
     func fly()
-    func swim()
+    //func swim()
 }
 
 
@@ -95,9 +95,9 @@ class Bird {
 
 class Egale : Bird, CanFly {
     
-//    func fly() {
-//        print("Eagle can fly with wings ")
-//    }
+    func fly() {
+        print("Eagle can fly with wings ")
+    }
 //    func foar() {
 //        print("Eagle can foar" )
 //    }
@@ -109,13 +109,9 @@ class Pen : Bird {
 }
 
 struct Aeroplane : CanFly {
-//    func swim() {
-//        <#code#>
-//    }
-//    
-//    func fly() {
-//        print("Aeroplane use Engine to fly")
-//    }
+    func fly() {
+        print("Aeroplane use Engine to fly")
+    }
 }
 
 
