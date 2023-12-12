@@ -52,3 +52,37 @@ calculator(n1: 400, n2: 50, operation:   {  $0 * $1  } )
 // trailing clousure - if the last parameter is a clousure then, we mau come up with a TC
 calculator(n1: 400, n2: 50) {  $0 * $1  }
 
+
+
+
+
+var oldArray = [1,2,3,4,5,6,7,8]
+
+func addOne(n1:Int)->Int {
+    return n1+1
+}
+var newArray = oldArray.map(addOne)
+print(newArray)
+
+
+
+// using clousure
+
+var newArrayD = oldArray.map( { (n1:Int)->Int in
+    var xI = n1 + 5
+    return xI+1
+})
+print(newArrayD)
+
+var newArray1 = oldArray.map({ n1 in n1+1 })
+print ( newArray1 )
+
+
+var newArray2 = oldArray.map({$0+1})
+print ( newArray2 )
+
+
+var newArray3 = oldArray.map{$0+1}
+print ( newArray3 )
+
+
