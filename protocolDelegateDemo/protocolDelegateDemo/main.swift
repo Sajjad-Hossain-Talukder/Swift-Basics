@@ -31,18 +31,42 @@ struct Paramedic : AdvanceLifeSupport {
     }
     
     func performCPR() {
-        print("Paramedic \(name) Is here to help you. Keep Patience")
+        print("Paramedic \(name) is here to help you. Keep Patience")
     }
     
     func paraTask() {
         print("Paramedic are responsible for ..... ")
     }
-    
+}
+
+
+class Doctor: AdvanceLifeSupport {
+    init(handler:EmergencyCallHandler){
+        handler.delegate = self
+    }
+    func performCPR() {
+        print("Doctor is here. Don't Worry!!!")
+    }
+    func suggestMedicine() {
+        print("These are the suggested medicine. Have timely... ")
+    }
+}
+
+class Sergon : Doctor {
+    override func performCPR() {
+        super.performCPR()
+        print("I am Surgon.")
+    }
+    func surgeryNeeded(){
+        print("This patient must be come under surgery immediately")
+    }
 }
 
 let emergencyWorkerSajjad = EmergencyCallHandler()
 let paramedicWorkerArman = Paramedic(handler: emergencyWorkerSajjad , nm: "Arman")
 let paramedicWorkerSakib = Paramedic(handler: emergencyWorkerSajjad , nm: "Sakib")
+
+let surgonWorkerNain = Sergon(handler: emergencyWorkerSajjad)
 
 
 emergencyWorkerSajjad.assessSituation()
