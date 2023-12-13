@@ -5,8 +5,8 @@ var pi = 3.14159
 pi.round()
 
 
-
 /*
+ We can extended all oper-source and close-source type in Swift . Like Double is open source but UIButton is close source. But we cam extend both
  
  Extension Syntax:
  
@@ -21,7 +21,6 @@ pi.round()
  }
  
  */
-
 
 
 
@@ -49,6 +48,22 @@ print(roundedToPlace1)
 var roundedToPlace2 = piAgain.round(to: 4)
 print(roundedToPlace2)
 
+
+// Extending UIBUtton
+
+var btn : UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+
+
+
+extension UIButton {
+    func roundedButton(){
+        self.backgroundColor = .red
+        self.layer.cornerRadius = 25
+        self.clipsToBounds = true
+    }
+}
+
+btn.roundedButton()
 
 
 
