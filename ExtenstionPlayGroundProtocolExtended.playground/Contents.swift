@@ -1,1 +1,2 @@
-import UIKit
+var x = 5
+print(x)
