@@ -1,0 +1,3 @@
+[submodule "ViewControllerLifeCycleDemo"]
+	path = ViewControllerLifeCycleDemo
+	url = https://github.com/appbrewery/LifecycleDemo.git
