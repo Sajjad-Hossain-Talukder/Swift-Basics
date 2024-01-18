@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jK1-3X-zwV">
+                                <rect key="frame" x="0.0" y="445" width="414" height="451"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="451" id="0rq-3M-zLd"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="HI7-eJ-IR5" kind="embed" id="nC3-Fp-4ha"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-wx-Hwa">
+                                <rect key="frame" x="157.5" y="248" width="99" height="30"/>
+                                <state key="normal" title="Toggle Drawer">
+                                    <color key="titleColor" red="0.35285058619999998" green="0.50444900989999997" blue="0.62013047929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleDrawer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="La8-uk-Pwx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G0I-wx-Hwa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="6PP-AH-yu6"/>
+                            <constraint firstItem="G0I-wx-Hwa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Vv-Hb-G8g"/>
+                            <constraint firstItem="jK1-3X-zwV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CaL-J4-owr"/>
+                            <constraint firstItem="jK1-3X-zwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q7x-dh-cit"/>
+                            <constraint firstItem="jK1-3X-zwV" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="ZwR-k1-zdH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G0I-wx-Hwa" secondAttribute="trailing" constant="5" id="acC-ug-lJz"/>
+                            <constraint firstItem="G0I-wx-Hwa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="s7M-uO-rlE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawerHeightConstraint" destination="0rq-3M-zLd" id="o8d-f8-aul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="yOQ-Y5-T8l">
+            <objects>
+                <viewController id="HI7-eJ-IR5" customClass="ContainerViewController" customModule="DrawerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igz-SJ-ocH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-5v-KwO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geV-JY-FFG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="geV-JY-FFG" firstAttribute="leading" secondItem="9Rd-5v-KwO" secondAttribute="leading" id="0CI-F2-Fqe"/>
+                                    <constraint firstAttribute="trailing" secondItem="geV-JY-FFG" secondAttribute="trailing" id="DOh-O6-KtG"/>
+                                    <constraint firstAttribute="bottom" secondItem="geV-JY-FFG" secondAttribute="bottom" id="Ky7-Ls-zNC"/>
+                                    <constraint firstItem="geV-JY-FFG" firstAttribute="top" secondItem="9Rd-5v-KwO" secondAttribute="top" id="p6v-or-KlM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BYl-cD-1f0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Rd-5v-KwO" secondAttribute="trailing" id="GQA-Wm-y3Q"/>
+                            <constraint firstAttribute="bottom" secondItem="9Rd-5v-KwO" secondAttribute="bottom" id="Ib4-pK-YfP"/>
+                            <constraint firstItem="9Rd-5v-KwO" firstAttribute="leading" secondItem="igz-SJ-ocH" secondAttribute="leading" id="ahj-sr-FBc"/>
+                            <constraint firstItem="9Rd-5v-KwO" firstAttribute="top" secondItem="igz-SJ-ocH" secondAttribute="top" id="qQy-6l-2w2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topView" destination="geV-JY-FFG" id="LO1-6z-dIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfW-oN-ku1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="674.66517857142856"/>
+        </scene>
+    </scenes>
+</document>
