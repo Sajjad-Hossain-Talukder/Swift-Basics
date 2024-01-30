@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CropImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7P-oG-gBt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Qi-fJ-9bm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="6Qi-fJ-9bm" firstAttribute="top" secondItem="N7P-oG-gBt" secondAttribute="top" id="0m5-Yp-NL5"/>
+                                    <constraint firstItem="6Qi-fJ-9bm" firstAttribute="leading" secondItem="N7P-oG-gBt" secondAttribute="leading" id="aPp-Fm-PS3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Qi-fJ-9bm" secondAttribute="trailing" id="bnm-fr-9qW"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Qi-fJ-9bm" secondAttribute="bottom" id="eQH-7Y-kks"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6D-Bi-iPy">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-bB-sXI">
+                                        <rect key="frame" x="153.5" y="32.5" width="107" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="E2s-aY-blN"/>
+                                            <constraint firstAttribute="width" constant="107" id="Zdm-PN-gFx"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.47843137250000001" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Pick Image"/>
+                                        <connections>
+                                            <action selector="pickImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVk-MX-OU8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96146005779999999" green="0.94400974550000005" blue="0.88179298189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lFw-bB-sXI" firstAttribute="centerX" secondItem="i6D-Bi-iPy" secondAttribute="centerX" id="N6x-UU-qUS"/>
+                                    <constraint firstItem="lFw-bB-sXI" firstAttribute="centerY" secondItem="i6D-Bi-iPy" secondAttribute="centerY" id="zCl-RM-xBd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N7P-oG-gBt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1qi-Fg-1LA"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="top" secondItem="N7P-oG-gBt" secondAttribute="bottom" id="45i-RT-XD1"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.111607" id="9nU-Oc-LLk"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="top" secondItem="N7P-oG-gBt" secondAttribute="bottom" id="Cj6-Zj-8aT"/>
+                            <constraint firstAttribute="bottom" secondItem="i6D-Bi-iPy" secondAttribute="bottom" id="OzF-xo-zf5"/>
+                            <constraint firstItem="N7P-oG-gBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qa4-WN-v7O"/>
+                            <constraint firstItem="N7P-oG-gBt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aL0-vX-lNa"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fgi-l3-l7V"/>
+                            <constraint firstItem="N7P-oG-gBt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="fre-uS-is6"/>
+                            <constraint firstItem="N7P-oG-gBt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.888393" id="pJt-FD-uvm"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="sje-1E-5on"/>
+                            <constraint firstItem="i6D-Bi-iPy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ysb-iX-SsB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6Qi-fJ-9bm" id="gmk-jH-gOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.43478260869566" y="-27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

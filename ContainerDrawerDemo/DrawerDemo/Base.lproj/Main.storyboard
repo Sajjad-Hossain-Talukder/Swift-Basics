@@ -68,7 +68,19 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geV-JY-FFG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Brother" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehX-HD-6y7">
+                                                <rect key="frame" x="109.5" y="204.5" width="195.5" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ehX-HD-6y7" firstAttribute="centerY" secondItem="geV-JY-FFG" secondAttribute="centerY" id="195-4D-CaV"/>
+                                            <constraint firstItem="ehX-HD-6y7" firstAttribute="centerX" secondItem="geV-JY-FFG" secondAttribute="centerX" id="TU3-Ti-w6R"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
