@@ -1,0 +1,16 @@
+PODS:
+  - DisplaySwitcher (2.0)
+
+DEPENDENCIES:
+  - DisplaySwitcher (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - DisplaySwitcher
+
+SPEC CHECKSUMS:
+  DisplaySwitcher: 1db23ee6a45fbebac733917cc002204adad37d28
+
+PODFILE CHECKSUM: 33773e998a59f469530d4ec87bd7dc4594eeea1c
+
+COCOAPODS: 1.8.4
