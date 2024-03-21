@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="layoutingBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m46-Kj-BFC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J7-jc-pt9">
+                                <rect key="frame" x="0.0" y="379" width="414" height="517"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5J7-jc-pt9" firstAttribute="top" secondItem="m46-Kj-BFC" secondAttribute="bottom" id="0x6-i9-iTf"/>
+                            <constraint firstItem="5J7-jc-pt9" firstAttribute="top" secondItem="m46-Kj-BFC" secondAttribute="bottom" id="5JB-tE-MLf"/>
+                            <constraint firstItem="m46-Kj-BFC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H5w-rc-Dbz"/>
+                            <constraint firstItem="m46-Kj-BFC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lml-kL-hXi"/>
+                            <constraint firstItem="5J7-jc-pt9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.577009" id="O8g-fX-fLS"/>
+                            <constraint firstItem="5J7-jc-pt9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RBa-m7-Zxk"/>
+                            <constraint firstItem="5J7-jc-pt9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SAN-br-h8u"/>
+                            <constraint firstItem="m46-Kj-BFC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.422991" id="WWO-Ab-jRi"/>
+                            <constraint firstAttribute="bottom" secondItem="5J7-jc-pt9" secondAttribute="bottom" id="nak-Oj-Rlr"/>
+                            <constraint firstItem="m46-Kj-BFC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="txL-ba-anY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

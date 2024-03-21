@@ -1,0 +1,6 @@
+framework module Pods_DrawerPod {
+  umbrella header "Pods-DrawerPod-umbrella.h"
+
+  export *
+  module * { export * }
+}
