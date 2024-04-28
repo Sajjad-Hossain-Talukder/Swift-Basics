@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popup-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Popup" id="Y6W-OH-hqX" customClass="Popup" customModule="rewardedAd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-MC-p9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxv-si-QTT">
+                                        <rect key="frame" x="24" y="170.5" width="366" height="555"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Hxv-si-QTT" firstAttribute="width" secondItem="QzO-MC-p9Z" secondAttribute="width" multiplier="0.884058" id="Fzm-XB-4KW"/>
+                                    <constraint firstItem="Hxv-si-QTT" firstAttribute="height" secondItem="QzO-MC-p9Z" secondAttribute="height" multiplier="0.61942" id="LFB-tt-vrs"/>
+                                    <constraint firstItem="Hxv-si-QTT" firstAttribute="centerY" secondItem="QzO-MC-p9Z" secondAttribute="centerY" id="OKF-JV-jqj"/>
+                                    <constraint firstItem="Hxv-si-QTT" firstAttribute="centerX" secondItem="QzO-MC-p9Z" secondAttribute="centerX" id="e6n-ej-Sg0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QzO-MC-p9Z" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="5Ac-uK-ZmG"/>
+                            <constraint firstAttribute="bottom" secondItem="QzO-MC-p9Z" secondAttribute="bottom" id="EU1-QA-eMg"/>
+                            <constraint firstAttribute="trailing" secondItem="QzO-MC-p9Z" secondAttribute="trailing" id="GWN-dL-SED"/>
+                            <constraint firstItem="QzO-MC-p9Z" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="YSn-hG-h2y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="Hxv-si-QTT" id="qtL-54-9BH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
