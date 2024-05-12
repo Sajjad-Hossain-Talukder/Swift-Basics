@@ -19,29 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         // Override point for customization after application launch.
         
         
+        self.configurePushNotifications()
+        
+        
+        return true
+    }
+    
+    func configurePushNotifications(){
+        
         FirebaseApp.configure()
         
-        Messaging.messaging().delegate = self
-        
-        registerForPushNotifications(application: application)
-        
+    
         UNUserNotificationCenter.current().delegate = self
-
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(
           options: authOptions,
           completionHandler: { _, _ in }
         )
-
-      
+        UIApplication.shared.registerForRemoteNotifications()
+        Messaging.messaging().delegate = self
         
-        application.registerForRemoteNotifications()
-
-        
-        
-        
-        return true
     }
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -52,56 +51,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async
-      -> UIBackgroundFetchResult {
-      // If you are receiving a notification message while your app is in the background,
-      // this callback will not be fired till the user taps on the notification launching the application.
-      // TODO: Handle data of notification
-
-      // With swizzling disabled you must let Messaging know about the message, for Analytics
-      // Messaging.messaging().appDidReceiveMessage(userInfo)
-
-      // Print message ID.
-      if let messageID = userInfo[gcmMessageIDKey] {
-        print("Message ID: \(messageID)")
-      }
-
-      // Print full message.
-      print(userInfo)
-
-      return UIBackgroundFetchResult.newData
-    }
-
-
-
     
 }
 
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print(error)
-    }
-    
-    
-    private func registerForPushNotifications(application: UIApplication) {
-        UNUserNotificationCenter.current().delegate = self
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
 
-        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {
-            (granted, error) in
-            guard granted else { return }
-            DispatchQueue.main.async {
-                application.registerForRemoteNotifications()
-            }
-        }
-    }
-    
+extension AppDelegate: UNUserNotificationCenterDelegate {
+ 
+  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+    let userInfo = notification.request.content.userInfo
+    print(userInfo)
+    return [[.alert, .sound]]
+  }
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+    let userInfo = response.notification.request.content.userInfo
+    print(userInfo)
+  }
 }
 
 
 extension AppDelegate: MessagingDelegate {
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        print("Firebase registration token: \(String(describing: fcmToken))")
+      print("Firebase registration token: \(String(describing: fcmToken))")
+      
+      let dataDict: [String: String] = ["token": fcmToken ?? ""]
+      NotificationCenter.default.post(
+        name: Notification.Name("FCMToken"),
+        object: nil,
+        userInfo: dataDict
+      )
+        
     }
+    
 }
